@@ -1,0 +1,25 @@
+GET http://localhost:3000/accounts
+
+###
+
+GET http://localhost:3000/accounts/beb891a8-961e-45ae-b553-dbab881cc19c
+
+###
+POST http://localhost:3000/accounts
+Content-Type: application/json
+
+{
+  "name": "Conta 1"
+}
+
+###
+PATCH http://localhost:3000/accounts/beb891a8-961e-45ae-b553-dbab881cc19c
+Content-Type: application/json
+
+{
+  "name": "Daniel Hessel",
+}
+
+###
+DELETE http://localhost:3000/accounts/beb891a8-961e-45ae-b553-dbab881cc19c
+

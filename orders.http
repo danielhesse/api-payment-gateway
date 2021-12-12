@@ -1,0 +1,31 @@
+GET http://localhost:3000/orders
+x-token: lkxmmqwbelr
+
+###
+
+GET http://localhost:3000/orders/460d9ed0-9e56-4299-9322-94d04548cb07
+
+###
+POST http://localhost:3000/orders
+Content-Type: application/json
+x-token: lkxmmqwbelr
+
+{
+  "amount": 30.30,
+  "credit_card_number": "1111",
+  "credit_card_name": "Daniel Hessel"
+}
+
+###
+PATCH http://localhost:3000/orders/460d9ed0-9e56-4299-9322-94d04548cb07
+Content-Type: application/json
+
+{
+  "amount": 30.33,
+  "credit_card_number": "11113",
+  "credit_card_name": "Daniel Hessel"
+}
+
+###
+DELETE http://localhost:3000/orders/6e3c3607-3057-4a79-ab66-f62e8b858e71
+
