@@ -5,6 +5,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Order } from './orders/entities/order.entity';
 import { OrdersModule } from './orders/orders.module';
+import { AccountsModule } from './accounts/accounts.module';
+import { Account } from './accounts/entities/account.entity';
 
 @Module({
   imports: [
@@ -13,8 +15,13 @@ import { OrdersModule } from './orders/orders.module';
       dialect: 'sqlite',
       host: join(__dirname, 'database.sqlite'),
       autoLoadModels: true,
-      models: [Order],
+      models: [Order, Account],
+      sync: {
+        alter: true,
+        // force: true (nunca usar em produção)
+      },
     }),
+    AccountsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
