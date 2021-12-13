@@ -1,5 +1,5 @@
 GET http://localhost:3000/orders
-x-token: lkxmmqwbelr
+x-token: p3kd58bb5xl
 
 ###
 
@@ -8,7 +8,7 @@ GET http://localhost:3000/orders/460d9ed0-9e56-4299-9322-94d04548cb07
 ###
 POST http://localhost:3000/orders
 Content-Type: application/json
-x-token: lkxmmqwbelr
+x-token: p3kd58bb5xl
 
 {
   "amount": 30.30,
